@@ -1,0 +1,414 @@
+/* Tirar as configurações que vem por padrão no navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* configuração inserida para toda a pagina html para melhor conversão da unidade pixel em "em" */
+:root {
+  font-size: 62.5%;
+}
+
+/* ajuste no layout da pagina */
+body {
+  display: block;
+  width: auto;
+  min-height: 100vh;
+  background-image: url(./img/hd2.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+/* organização das divs presentes no header */
+header {
+  height: 28rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* posicionamento da caixa que contem o titulo e a logo */
+.hdr {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 6rem;
+  padding: 2.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* estilização do titulo */
+header h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 3rem;
+  color: rgb(133, 23, 23);
+  animation: downtop  1s;
+}
+
+/* estilização da logo */
+.img {
+  display:flex;
+  min-height: 9rem;
+  min-width: 9rem;
+  background-image: url(./img/logo1.jpg);
+  background-size: contain;
+  border-radius: 50%;
+
+  animation: rotate 1s;
+}
+
+/* estilização do menu*/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: auto auto 2rem;  
+}
+
+/* estilização diferenciada da parte do menu em qual a pagina se encontra*/
+nav a:nth-child(3) {
+  background-color:rgb(104, 207, 83);
+}
+
+/* estilização do texto do menu*/
+a.link {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color:rgb(133, 23, 23);
+  padding: 0.2rem;
+  margin-top: 0.6rem;
+  background-color: white;
+  border-radius: 1rem;
+
+  transition: transform 500ms; 
+}
+
+/* efeito para o menu ao passar o mouse*/
+a.link:hover {
+  background-color:rgb(104, 207, 83);
+  transform: scale(1.1);
+}
+
+/* organização dos elementos presentes no main*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 2rem;
+  background-color: antiquewhite;
+}
+
+/* organização dos elementos presentes nessa div (texto de contatos e formulario)*/
+.contatos {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 5rem;
+  padding-bottom: 3rem;
+  width: 100%;
+  
+  animation: topdown 1s 200ms backwards;
+}
+
+/* estilização para o texto de contatos*/
+.local {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 5rem;
+  padding: 2rem;
+}
+
+.local h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;  
+}
+
+.local p {
+  font-size: 1.5rem;
+  text-align:center;
+}
+
+/* estilização para o formulário*/
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;  
+}
+
+form legend {
+  font-family: 'EB Garamond', serif;
+  font-size:2.5rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  font-family: 'Acme', sans-serif;
+  font-size: 1.5rem;
+  line-height: 4rem;
+  color: black;
+}
+
+.input-wrapper input {
+  border-radius: 0.8rem;
+  width: 80%;
+  padding: 0 5px;
+
+  font-family: 'Acme', sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.input-wrapper textarea {
+  border-radius: 0.8rem;
+  height: 9rem;
+  width: 80%;
+  padding: 0 5px;
+
+  font-size: 16px;
+  line-height: 26px;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+/* estilização para o botão*/
+form .button {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 0 100px;
+  width: 50%;
+  
+  font-size: 16px;
+  line-height: 26px;
+  background-color:rgb(170, 58, 58);
+
+  transition: transform 500ms;  
+}
+
+/* efeito para o botão ao passar o mouse*/
+form .button:hover {
+  transform: scale(1.1);
+  background-color: rgb(113, 194, 117);
+  cursor: pointer;
+    
+}
+
+/* estilização para o mapa do google*/
+iframe {
+  display: flex;
+  border-radius: 2rem;
+  width: 100%;
+
+  animation: topdown 1s 400ms backwards;
+}
+
+/* organização dos elementos presentes no footer*/
+footer {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  
+  width: 100%;
+  padding: 2.5rem;
+}
+
+/* estilização para o texto do footer*/
+.txtf {
+  display: flex;
+  background-color: antiquewhite;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.redes_sociais {
+  width: 5rem;
+  height: 5rem;
+  margin: 0.5rem;
+}
+
+.texto_redes_sociais {
+  display: flex;
+  align-items: center;
+}
+
+/* Media Query (adaptação do layout de acordo com o tamanho limitado) */
+@media (min-width: 1150px){
+  .hdr {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      gap: 10rem;
+      padding: 2.5rem;
+      padding-bottom: 1.5rem;   
+  }
+
+  header h1 {
+      font-size: 5em;
+  }
+
+  .img {
+      display:flex;
+      min-height: 15rem;
+      min-width: 15rem;
+      background-image: url(./img/logo1.jpg);
+      background-size: contain;
+      border-radius: 50%;       
+  }
+
+  a.link {
+      font-size: 2.5rem;
+      padding: 1rem;
+  }
+  
+  .contatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 120rem;
+    max-height: 50rem;
+  }
+  
+  .local {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 15rem;
+  }
+  
+  .local h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 3.5rem;  
+  }
+  
+  .local p {
+    font-size: 2rem;
+  }
+  
+  form {
+    background-color: white;
+    height: 40rem;
+    width: 70rem;
+    border-radius: 8px;
+    padding: 20px;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;  
+  }
+  
+  form legend {
+    font-family: 'EB Garamond', serif;
+    font-size:3rem;
+    font-weight: bold;
+    line-height: 4rem;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+  
+    font-family: 'Acme', sans-serif;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: black;
+  }
+  
+  .input-wrapper input {
+    border-radius: 0.8rem;
+    width: 60rem;
+    padding: 0 5px;
+  
+    font-family: 'Acme', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .input-wrapper textarea {
+    border-radius: 0.8rem;
+    height: 9rem;
+    width: 60rem;
+    padding: 0 5px;
+  
+    font-size: 16px;
+    line-height: 26px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+  }
+  
+  form .button {
+    border-radius: 8px;
+    padding: 0 100px;
+  
+    font-family: 'Acme', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    background-color:  rgb(170, 58, 58);;
+  }
+
+  
+  iframe {
+    max-width: 120rem;
+  }
+  
+  footer {
+      font-size: 2rem;
+  }
+}
+
+/* KeyFrames (configuração das animações utilizadas na página) */
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop {
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate{
+  0%{
+    transform: rotateY(360deg);
+  }
+
+  100%{
+    transform: rotate(0);
+  }
+}
